@@ -1,0 +1,20 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src blob:">
+<link rel="stylesheet" href="style.css"></head>
+<body><div id="root">
+  <div id="bubble" class="bubble hit hidden"></div>
+  <div id="menu" class="menu hit hidden">
+    <input id="cmd" placeholder="輸入題目或指令（例：幫我寫一首歌）" autocomplete="off">
+    <div class="grid">
+      <button data-act="full">📸 全螢幕解題</button><button data-act="region">✂️ 區域截圖解題</button>
+      <button data-act="file">🖼️ 上傳圖片</button><button data-act="reverse">🔍 以圖搜圖</button>
+      <button data-act="game" id="b-game">🎮 遊戲觀戰：關</button><button data-act="pomo" id="b-pomo">🍅 番茄鐘：關</button>
+      <button data-act="music">🎵 辨識音樂</button><button data-act="settings">⚙️ 設定</button>
+    </div>
+  </div>
+  <div id="chip" class="chip hit hidden"></div>
+  <div id="pet" class="hit" data-mood="idle">
+    <div class="body"><div class="eye l"></div><div class="eye r"></div><div class="blush l"></div><div class="blush r"></div><div class="mouth"></div></div>
+    <div class="shadow"></div>
+  </div>
+</div><script src="pet.js"></script></body></html>

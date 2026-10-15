@@ -1,0 +1,15 @@
+:root{--ink:#3a2a2a;--pink:#ffb8a8;--soft:#fff3ef;--line:#e8cfc8}
+*{box-sizing:border-box}
+body{margin:0;background:#fffaf8;color:var(--ink);font:15px/1.65 "Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif}
+main{max-width:680px;margin:0 auto;padding:20px}
+button{font:inherit;font-size:13px;padding:7px 12px;border:2px solid var(--ink);border-radius:12px;background:#fff;color:var(--ink);cursor:pointer}
+button:hover{background:var(--pink)}button:disabled{opacity:.5;cursor:default}
+input,select{font:inherit;padding:8px 10px;border:2px solid var(--line);border-radius:10px;width:100%;background:#fff;color:var(--ink)}
+input:focus,select:focus{outline:none;border-color:var(--pink)}
+h1{font-size:20px;margin:0 0 12px}h2{font-size:17px;margin:18px 0 6px}h3{font-size:15px;margin:14px 0 4px}
+code{background:var(--soft);padding:1px 5px;border-radius:5px}pre{background:var(--soft);padding:10px;border-radius:10px;overflow:auto}
+a{color:#c4553d}.row{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.muted{color:#8a7470;font-size:13px}
+.card{background:#fff;border:2px solid var(--ink);border-radius:18px;padding:14px 16px;margin:14px 0}
+.final{background:var(--pink);border:2px solid var(--ink);border-radius:16px;padding:12px 16px;font-weight:700;font-size:16px}
+img.shot{max-width:100%;max-height:200px;border-radius:12px;border:2px solid var(--line)}
+.toast{color:#2f7a4d;font-size:13px;min-height:1.2em}.toast.err{color:#b3261e}

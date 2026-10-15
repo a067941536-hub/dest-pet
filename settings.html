@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"><title>小糰設定</title><link rel="stylesheet" href="page.css">
+<style>.card header{display:flex;justify-content:space-between;align-items:center}.badge{font-size:12px;padding:2px 10px;border-radius:99px;background:var(--soft)}.badge.ok{background:#d9f3e3}
+label.f{display:block;margin:8px 0 2px;font-size:13px}details{margin-top:10px}summary{cursor:pointer;font-weight:700}ol{padding-left:20px}.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}</style></head>
+<body><main>
+<h1>⚙️ 小糰設定</h1>
+<p class="muted">選一個你有金鑰的 AI 當主力，也可以三家都填，隨時切換。金鑰只存在你的電腦（以系統金鑰庫加密），只會直接送到該家官方 API。</p>
+<div id="providers"></div>
+<section class="card"><h2 style="margin-top:0">🎵 音樂辨識（AudD）</h2>
+<div class="row" style="margin:0 0 8px"><button data-open="https://dashboard.audd.io/">🔑 取得 AudD Token</button><span id="audd-badge" class="badge"></span></div>
+<input id="audd" type="password" placeholder="貼上 AudD API Token" autocomplete="off">
+<label class="f">辨識音源</label><select id="audioSource"><option value="system">系統播放的聲音（Windows）</option><option value="mic">麥克風</option></select>
+<details><summary>📖 教學</summary><ol><li>開啟 <a href="#" data-open="https://dashboard.audd.io/">dashboard.audd.io</a> 註冊並登入。</li><li>在 Dashboard 找到 API Token 並複製。</li><li>貼到上面欄位並儲存。有免費試用額度，用完需依官方方案付費。</li></ol></details></section>
+<section class="card"><h2 style="margin-top:0">🎮 一般設定</h2>
+<div class="g2"><div><label class="f">遊戲評價風格</label><select id="persona"><option value="auto">自動（失誤毒舌、精彩讚賞）</option><option value="roast">一律毒舌</option><option value="praise">一律真心讚賞</option></select></div>
+<div><label class="f">觀戰間隔（秒，越長越省錢）</label><input id="gameInterval" type="number" min="8" max="300"></div>
+<div><label class="f">番茄鐘：專注（分）</label><input id="pf" type="number" min="1"></div>
+<div><label class="f">番茄鐘：休息（分）</label><input id="pr" type="number" min="1"></div></div>
+<label class="f">回覆語言</label><input id="language"></section>
+<div class="row"><button id="save" style="background:var(--pink)">💾 儲存</button><span id="toast" class="toast"></span></div>
+<p class="muted">隱私提醒：解題會把你選取的畫面送到所選 AI 服務；遊戲觀戰會定期（依間隔）送出整個螢幕的縮圖。觀戰前請關閉含個資的視窗。</p>
+</main><script src="settings.js"></script></body></html>

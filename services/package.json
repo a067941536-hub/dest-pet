@@ -1,0 +1,14 @@
+{
+  "name": "mascot-assistant",
+  "version": "1.0.0",
+  "description": "小糰 — 桌面寵物兼萬能解題助理",
+  "main": "main.js",
+  "scripts": { "start": "electron .", "dist": "electron-builder --win" },
+  "devDependencies": { "electron": "^33.0.0", "electron-builder": "^25.0.0" },
+  "build": {
+    "appId": "com.mascot.assistant",
+    "productName": "MascotAssistant",
+    "files": ["src/**/*", "assets/**/*", "package.json"],
+    "win": { "target": "nsis" }
+  }
+}
